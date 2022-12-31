@@ -13,14 +13,14 @@ mv ~/Downloads/launcher-modular.service ~/.config/systemd/user/launcher-modular.
 systemctl --user enable --now launcher-modular
 ```
 
-or alternatively you can download it directly
+Or alternatively you can download it directly
 ```
 mkdir -p ~/.config/systemd/user
 wget -O ~/.config/systemd/user/launcher-modular.service https://raw.githubusercontent.com/ruditimmermans/launcher-modular-service/main/user/launcher-modular.service
 systemctl --user enable --now launcher-modular
 ```
 
-you can check if launcher-modular session-manager is running properly with
+You can check if launcher-modular session-manager is running properly with
 ```
 systemctl --user status launcher-modular
 ```
