@@ -1,0 +1,10 @@
+[Unit]
+Description=Launcher Modular
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/lomiri-app-launch launchermodular.ubuntouchfr_launchermodular
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
