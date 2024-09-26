@@ -24,3 +24,18 @@ You can check if launcher-modular session-manager is running properly with
 ```
 systemctl --user status launcher-modular
 ```
+
+If you want to disable autostart
+```
+systemctl --user --now launcher-modular
+```
+
+If you want to automatically re-start when it is close (maybe by accident) you have to edit the file
+and change `Restart=on-failure` to `Restart=always` 
+```
+sed -i 's/Restart=on-failure/Restart=always/g' ~/.config/systemd/user/launcher-modular.service
+```
+To rollback as before:
+```
+sed -i 's/Restart=always/Restart=on-failure/g' ~/.config/systemd/user/launcher-modular.service
+```
